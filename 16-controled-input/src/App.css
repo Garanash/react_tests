@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  display: flex;
+}
+
+h1 {
+  size: 60px;
+}
+
+.form {
+  text-align: center;
+  width: 40%;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+label,
+input,
+button {
+  size: 50px;
+  margin: 10px;
+  padding: auto;
+}
+
+button {
+  background-color: aquamarine;
+  width: 100px;
+  height: 50px;
+}
