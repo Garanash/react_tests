@@ -9,12 +9,26 @@ function Posts() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((result) => setPosts(result))
-      .catch((error) => setError(error.message))
-      .finally(() => setIsLoading(false));
+    const fetchData = async () => {
+      try {
+        const res = await fetch(API_URL);
+        const posts = await res.json();
+        setPosts(posts);
+      } catch (error) {
+        setError(error.message);
+      }
+      setIsLoading(false);
+    };
+    fetchData();
   }, []);
+
+  // useEffect(() => {
+  //   fetch(API_URL)
+  //     .then((res) => res.json())
+  //     .then((result) => setPosts(result))
+  //     .catch((error) => setError(error.message))
+  //     .finally(() => setIsLoading(false));
+  // }, []);
 
   if (error) {
     return <h1> {error} </h1>;
