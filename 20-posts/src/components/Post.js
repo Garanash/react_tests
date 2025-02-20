@@ -1,8 +1,13 @@
-function Post() {
+import "./Post.css";
+
+function Post(props) {
+  const { id, title, userId, body } = props;
   return (
-    <>
-      <h1> Its post </h1>
-    </>
+    <div className="post">
+      <small>{id}</small>
+      <h2> {title}</h2>
+      <p>{body}</p>
+    </div>
   );
 }
 
