@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  color: aliceblue;
+}
+
+nav {
+  max-height: 100px;
+  background-color: aquamarine;
+}
+
+nav a {
+  margin: 30px 40px;
+  padding: 20px;
+}
+
+.active {
+  color: red;
+  text-decoration: none;
+}
